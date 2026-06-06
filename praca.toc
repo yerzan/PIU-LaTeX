@@ -1,0 +1,18 @@
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{\numberline {1}Wstęp}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Cel i zakres projektu}{6}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Cele systemu}{6}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Założenia projektu i grupy docelowe}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Typy użytkowników końcowych}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Role administracyjne}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Architektura interfejsu}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Struktura interfejsu klienta}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Struktura panelu administracyjnego}{9}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Kluczowe funkcjonalności i implementacja widoków}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Proces zakupowy klienta}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Panel zarządzania operacyjnego}{12}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Organizacja pracy i wykorzystanie AI}{16}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Podsumowanie}{17}{chapter.6}%
+\contentsline {section}{\textbf {Spis rysunków}}{18}{section*.11}%
+\contentsline {section}{\textbf {Spis listingów}}{19}{section*.11}%
+\contentsline {section}{Aneks A: Oświadczenie autorów projektu}{20}{chapter*.13}%

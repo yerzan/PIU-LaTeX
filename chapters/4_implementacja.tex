@@ -1,0 +1,45 @@
+\chapter{Kluczowe funkcjonalności i implementacja widoków}
+
+Zaprojektowany interfejs w pełni realizuje zakładane funkcje biznesowe, łącząc estetykę z wysoką użytecznością. Poniżej przedstawiono szczegółową implementację ścieżek użytkownika oraz procesów zarządczych.
+
+\section{Proces zakupowy klienta}
+Ścieżka zakupowa została zaprojektowana w sposób minimalizujący liczbę kroków. Proces rozpoczyna się od wyboru oferty (\texttt{ListaDiet.png}), poprzez szczegółową analizę parametrów diety (\texttt{SzczegolyDiet.png}), aż po personalizację w konfiguratorze (\texttt{OrderConfigurator.png}).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/ListaDiet.png}
+    \hfill
+    \includegraphics[width=0.45\textwidth]{figures/SzczegolyDiet.png}
+    \caption{Widok listy diet oraz szczegółowe informacje o wybranej opcji}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/OrderConfigurator.png}
+    \hfill
+    \includegraphics[width=0.45\textwidth]{figures/platnosc-podsumowanie.png}
+    \caption{Konfigurator zamówienia oraz finalizacja płatności}
+\end{figure}
+
+W konfiguratorze użytkownik personalizuje dietę, a następnie przechodzi do podsumowania (\texttt{platnosc-podsumowanie.png}), co zapewnia transparentność całego procesu[cite: 2, 3].
+
+\section{Panel zarządzania operacyjnego}
+Panel administracyjny stanowi zintegrowane środowisko do zarządzania cateringiem. Administrator może sprawnie obsługiwać zamówienia (\texttt{AdminOrders.png}) oraz zarządzać bazą klientów (\texttt{AdminCRM.png}).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/AdminOrders.png}
+    \hfill
+    \includegraphics[width=0.45\textwidth]{figures/AdminCRM.png}
+    \caption{Zarządzanie zamówieniami oraz moduł CRM}
+\end{figure}
+
+Kluczowym elementem wspierającym produkcję jest moduł zarządzania dietami i menu (\texttt{AdminDiets-menu.png}), który pozwala na przypisywanie posiłków do jadłospisu z pełną kontrolą wartości odżywczych oraz nadzór nad stanami magazynowymi składników[cite: 3].
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/AdminDiets-menu.png}
+    \caption{Zaawansowany moduł zarządzania dietami i biblioteką posiłków}
+\end{figure}
+
+Tak przygotowana implementacja interfejsu potwierdza kompleksowość systemu i jego gotowość do obsługi rzeczywistych procesów biznesowych cateringu dietetycznego[cite: 1, 3].
