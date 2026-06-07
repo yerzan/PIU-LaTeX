@@ -1,17 +1,30 @@
-\chapter{Wstęp}
+\chapter{Opis projektu}
 
-\section{Cel i zakres projektu}
-Projektowana aplikacja stanowi kompleksowy system informatyczny wspierający procesy biznesowe nowoczesnej firmy cateringowej oferującej diety pudełkowe. Celem nadrzędnym pracy jest zaprojektowanie intuicyjnego interfejsu użytkownika (UI) oraz zapewnienie wysokiej jakości wrażeń z użytkowania (UX), co jest kluczowe w systemach e-commerce o wysokim natężeniu transakcyjnym.
+\section{Charakterystyka aplikacji}
+Projektowana aplikacja to kompleksowy system informatyczny wspierający działalność nowoczesnej firmy cateringowej oferującej diety pudełkowe. Głównym celem systemu jest z jednej strony umożliwienie klientom łatwego i intuicyjnego zamawiania diet, a z drugiej – dostarczenie pracownikom firmy zaawansowanego panelu do zarządzania procesami biznesowymi. Aplikacja automatyzuje obsługę zamówień, zarządza magazynem i składnikami, a także wspiera planowanie produkcji posiłków oraz organizację logistyki i dostaw.
 
-System został opracowany w oparciu o analizę rynku usług cateringowych, inspirując się rozwiązaniami liderów branży, takimi jak serwis Wygodna Dieta, przy jednoczesnym rozszerzeniu funkcjonalności o dedykowany, wielomodułowy panel administracyjny.
-
-\section{Cele systemu}
-Głównym założeniem systemu jest automatyzacja kluczowych procesów operacyjnych przedsiębiorstwa. Do najważniejszych celów projektowych należą:
+\section{Typy użytkowników}
+W systemie wyróżniono dwie główne grupy użytkowników, dla których zaprojektowano odrębne interfejsy:
 \begin{itemize}
-    \item \textbf{Optymalizacja ścieżki zakupowej klienta}: Umożliwienie szybkiego i przejrzystego zamawiania diet, od konfiguracji planu żywieniowego po finalizację płatności.
-    \item \textbf{Automatyzacja obsługi zamówień}: Minimalizacja pracy manualnej poprzez integrację zamówień z bazą klientów oraz systemami logistycznymi.
-    \item \textbf{Zarządzanie zasobami}: Kontrola stanów magazynowych, automatyczne alerty o brakach oraz efektywne planowanie produkcji oparte na aktualnej liście zamówień.
-    \item \textbf{Logistyka i produkcja}: Wsparcie procesów dostaw poprzez planowanie tras i przypisywanie kurierów oraz zarządzanie jadłospisem i przypisywanie składników do posiłków.
+    \item \textbf{Użytkownicy klienccy (Frontend)}: Dzielą się na użytkowników niezalogowanych (przeglądających ofertę i cenniki) oraz zalogowanych, którzy mogą składać zamówienia, modyfikować aktywne diety oraz zarządzać swoimi danymi i adresami dostaw.
+    \item \textbf{Użytkownicy administracyjni (Backend)}: Obsługują panel zarządzania. Wyróżnia się tu administratora głównego (pełny dostęp), pracowników biura (obsługa zamówień), magazynierów (kontrola stanów składników) oraz logistyków/kurierów (obsługa tras).
 \end{itemize}
 
-Dzięki tak przyjętym założeniom, projektowana aplikacja nie pełni jedynie funkcji informacyjnej, ale staje się głównym narzędziem operacyjnym firmy, wspierającym jej rozwój i skalowalność.
+\section{Funkcjonalności aplikacji}
+Poniżej zestawiono kluczowe funkcjonalności systemu, podzielone na moduły klienckie i administracyjne.
+
+\textbf{Funkcjonalności użytkownika (klienta):}
+\begin{itemize}
+    \item \textbf{Strona główna i przegląd diet}: Prezentacja oferty, sekcje promocyjne, filtrowanie diet (np. standardowa, wegetariańska, ketogeniczna) oraz szczegółowe opisy jadłospisów.
+    \item \textbf{Konfigurator zamówienia}: Personalizacja diety (wybór kaloryczności, liczby dni, daty rozpoczęcia), dynamiczne przeliczanie ceny oraz wybór adresu dostawy.
+    \item \textbf{Proces płatności}: Podsumowanie zamówienia i wybór metody płatności online.
+    \item \textbf{Panel użytkownika i wsparcie}: Dostęp do historii zamówień, podgląd aktywnych diet, możliwość edycji danych osobowych oraz formularz kontaktowy i sekcja FAQ.
+\end{itemize}
+
+\textbf{Funkcjonalności administratora:}
+\begin{itemize}
+    \item \textbf{Dashboard (Panel główny)}: Widok podsumowujący liczbę zamówień, dostawy na dany dzień, generujący przychody oraz alerty magazynowe.
+    \item \textbf{Zarządzanie zamówieniami i CRM}: Pełna obsługa zamówień (zmiana statusów: nowe, w realizacji, w dostawie), filtrowanie oraz baza klientów z historią zamówień i notatkami o alergiach.
+    \item \textbf{Magazyn i Dostawcy}: Kontrola stanów magazynowych, historia zmian, alerty braków na podstawie systemu zapasu bezpieczeństwa oraz lista dostawców i cen zakupów.
+    \item \textbf{Logistyka i Diety}: Planowanie tras dla kurierów, tworzenie diet, planowanie menu i przypisywanie składników z magazynu do konkretnych posiłków.
+\end{itemize}

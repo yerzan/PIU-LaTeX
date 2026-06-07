@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCurated - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">FreshCurated</div>
+        <nav>
+            <a href="#">Diets</a>
+            <a href="#">Menu</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="dashboard-grid">
+            
+            <div class="dashboard-left">
+                <h2>Active Orders</h2>
+                
+                <section class="card active-order-card">
+                    <div class="order-image">
+                        <span class="badge">Active</span>
+                        <h3>Keto Lifestyle</h3>
+                    </div>
+                    <div class="order-details">
+                        <div class="progress-header">
+                            <span class="progress-text">Progress<br><strong>Day 15 of 20</strong></span>
+                            <span class="total-text">Total<br><strong>1,250 zł</strong></span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="btn-outline">Manage Plan</button>
+                            <button class="btn-accent">Track Order</button>
+                        </div>
+                    </div>
+                </section>
+
+                <h2>Delivery Addresses</h2>
+                
+                <div class="addresses-grid">
+                    <div class="address-card">
+                        <div class="address-header">
+                            <div class="title">
+                                <span class="icon">🏠</span> Home
+                            </div>
+                            <div class="actions">
+                                <span>✏️</span>
+                                <span>🗑️</span>
+                            </div>
+                        </div>
+                        <p class="address-lines">
+                            ul. Rejtana 16c<br>
+                            35-310 Rzeszów<br>
+                            Delivery instructions:<br>
+                            Leave at door
+                        </p>
+                    </div>
+
+                    <div class="address-card">
+                        <div class="address-header">
+                            <div class="title">
+                                <span class="icon">💼</span> Work
+                            </div>
+                            <div class="actions">
+                                <span>✏️</span>
+                                <span>🗑️</span>
+                            </div>
+                        </div>
+                        <p class="address-lines">
+                            Plac Europejski 1<br>
+                            00-844 Warszawa<br>
+                            Delivery instructions:<br>
+                            Reception desk
+                        </p>
+                    </div>
+
+                    <div class="address-card add-new">
+                        <span class="add-icon">⊕</span>
+                        <p>Add New Address</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-right">
+                <h2>Personal Data</h2>
+                
+                <section class="card form-card">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" value="Artur Jurkowski">
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" value="artur.j@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" value="+48 123 456 789">
+                    </div>
+                    <button class="btn-accent full-width">Save Changes</button>
+                </section>
+
+                <h2>Order History</h2>
+                
+                <div class="history-list">
+                    <div class="history-card">
+                        <div class="history-info">
+                            <div class="history-icon">🍴</div>
+                            <div>
+                                <h4>Standard</h4>
+                                <p>Oct 10 - Oct 30, 2023</p>
+                            </div>
+                        </div>
+                        <span class="history-price">1,100 zł</span>
+                    </div>
+
+                    <div class="history-card">
+                        <div class="history-info">
+                            <div class="history-icon">⚖️</div>
+                            <div>
+                                <h4>Keto</h4>
+                                <p>Sep 01 - Sep 20, 2023</p>
+                            </div>
+                        </div>
+                        <span class="history-price">1,350 zł</span>
+                    </div>
+                </div>
+
+                <a href="#" class="view-all-link">View All History</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h2 class="logo">FreshCurated</h2>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Careers</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2024 FRESHCURATED CATERING. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+</html>

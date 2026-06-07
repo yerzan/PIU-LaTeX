@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FreshCurated | High-End Editorial Wellness Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --color-primary: #006e1c;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #4caf50;
+  --color-on-primary-container: #003c0b;
+  --color-secondary-container: #a0f399;
+  --color-on-secondary-container: #217128;
+  --color-tertiary: #8b5000;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed: #ffdcbe;
+  --color-on-tertiary-fixed: #2c1600;
+  --color-surface: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-high: #e8e8e8;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #3f4a3c;
+  --color-outline-variant: #becab9;
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --radius-default: 0.25rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  --shadow-editorial: 0 24px 32px -12px rgba(26,28,28,0.04);
+  --shadow-card: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.03);
+}
+
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);background:var(--color-surface);color:var(--color-on-surface);-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;}
+button{cursor:pointer;font-family:inherit;border:none;background:none;}
+select,input{font-family:inherit;}
+::selection{background:var(--color-primary-container);color:var(--color-on-primary-container);}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle;}
+
+/* ===== LAYOUT ===== */
+.layout-container{max-width:1440px;margin-left:auto;margin-right:auto;padding-left:1.25rem;padding-right:1.25rem;}
+
+/* ===== NAV ===== */
+.topnav{position:fixed;top:0;width:100%;z-index:50;background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 3px rgba(0,0,0,0.08);font-family:var(--font-headline);letter-spacing:-0.01em;}
+.topnav__inner{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;}
+.topnav__logo{display:flex;align-items:center;gap:0.75rem;}
+.topnav__logo-text{font-size:1.25rem;font-weight:800;color:#15803d;letter-spacing:-0.04em;}
+.topnav__menu-icon{display:block;color:var(--color-on-surface);font-size:1.5rem;}
+.topnav__links{display:none;align-items:center;gap:2.5rem;}
+.topnav__links a{color:#57534e;font-weight:500;font-size:0.9375rem;transition:color 0.3s;}
+.topnav__links a:hover{color:#16a34a;}
+.topnav__actions{display:flex;align-items:center;gap:1rem;}
+.topnav__login{display:none;color:#57534e;font-weight:500;font-family:var(--font-body);transition:color 0.3s;transform:scale(0.95);}
+.topnav__login:hover{color:#16a34a;}
+.topnav__cta{background:#16a34a;color:#fff;padding:0.5rem 1rem;border-radius:var(--radius-default);font-weight:700;font-size:0.875rem;transform:scale(0.95);transition:opacity 0.2s;}
+.topnav__cta:active{opacity:0.8;}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding-top:6rem;padding-bottom:4rem;overflow:hidden;}
+.hero__grid{display:grid;grid-template-columns:1fr;align-items:center;gap:2rem;}
+.hero__content{z-index:10;text-align:center;}
+.hero__title{font-family:var(--font-headline);font-size:2.5rem;font-weight:800;color:var(--color-on-surface);letter-spacing:-0.03em;line-height:1.1;margin-bottom:1.5rem;}
+.hero__title .accent{color:var(--color-primary);font-style:italic;}
+.hero__desc{color:var(--color-on-surface-variant);font-size:1rem;line-height:1.7;margin-bottom:2rem;max-width:36rem;margin-left:auto;margin-right:auto;padding-left:0.5rem;padding-right:0.5rem;}
+.hero__buttons{display:flex;flex-direction:column;flex-wrap:wrap;justify-content:center;gap:1rem;padding-left:1rem;padding-right:1rem;}
+.btn-primary{background:var(--color-tertiary);color:var(--color-on-tertiary);padding:1rem 2.5rem;border-radius:var(--radius-default);font-weight:700;font-size:1.125rem;transform:scale(0.95);transition:opacity 0.2s;box-shadow:var(--shadow-editorial);width:100%;}
+.btn-primary:active{opacity:0.8;}
+.btn-outline{background:transparent;color:var(--color-primary);border:2px solid var(--color-primary);padding:1rem 2.5rem;border-radius:var(--radius-default);font-weight:700;font-size:1.125rem;transform:scale(0.95);transition:opacity 0.2s;width:100%;}
+.btn-outline:active{opacity:0.8;}
+.hero__image-wrap{position:relative;padding-left:0.5rem;padding-right:0.5rem;margin-top:2rem;}
+.hero__image-wrap:hover .hero__image-bg{transform:rotate(1deg);}
+.hero__image-bg{position:absolute;inset:-1rem;background:rgba(76,175,80,0.2);border-radius:2rem;transform:rotate(2deg);transition:transform 0.3s;}
+.hero__image-box{position:relative;height:300px;width:100%;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-editorial);}
+.hero__image-box img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s;}
+.hero__image-wrap:hover .hero__image-box img{transform:scale(1.05);}
+
+/* ===== CONFIGURATOR ===== */
+.configurator-section{padding-bottom:2rem;background:var(--color-surface-container-low);}
+.configurator-card{background:var(--color-surface-container-lowest);padding:1.5rem;border-radius:var(--radius-xl);box-shadow:var(--shadow-editorial);margin-top:-3rem;position:relative;z-index:20;}
+
+/* Mobile: stack form fields then cta below */
+.configurator-grid{display:flex;flex-direction:column;gap:1.25rem;align-items:stretch;}
+.configurator-fields{display:flex;flex-direction:column;gap:1.5rem;}
+
+.form-field{display:flex;flex-direction:column;gap:0.375rem;}
+.form-field label{font-size:0.75rem;font-weight:600;color:var(--color-on-surface-variant);margin-bottom:0.5rem;}
+
+/* Select wrapper for custom arrow */
+.select-wrap{position:relative;}
+.select-wrap select{width:100%;background:var(--color-surface-container-high);border:none;border-radius:var(--radius-default);padding:0.625rem 2.25rem 0.625rem 0.875rem;font-size:0.875rem;color:var(--color-on-surface);outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;}
+.select-wrap select:focus{box-shadow:0 0 0 2px rgba(0,110,28,0.2);}
+.select-wrap::after{content:'';position:absolute;right:0.75rem;top:50%;transform:translateY(-50%);width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--color-on-surface-variant);pointer-events:none;}
+
+.form-field input{width:100%;background:var(--color-surface-container-high);border:none;border-radius:var(--radius-default);padding:0.625rem 0.875rem;font-size:0.875rem;color:var(--color-on-surface);outline:none;}
+.form-field input:focus{box-shadow:0 0 0 2px rgba(0,110,28,0.2);}
+
+.configurator-cta{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:1rem;border-top:1px solid var(--color-outline-variant);gap:0.25rem;}
+.configurator-cta__label{font-size:0.75rem;color:var(--color-on-surface-variant);}
+.configurator-cta__price{font-family:var(--font-headline);font-size:1.875rem;font-weight:800;color:var(--color-primary);margin-bottom:0.75rem;}
+.btn-order{width:100%;background:var(--color-tertiary);color:var(--color-on-tertiary);padding:0.75rem 2.5rem;border-radius:var(--radius-default);font-weight:700;transform:scale(0.95);transition:opacity 0.2s;}
+.btn-order:active{opacity:0.8;}
+
+/* ===== DIET LIST ===== */
+.diet-section{padding-top:4rem;padding-bottom:4rem;background:var(--color-surface);}
+.section-title{font-family:var(--font-headline);font-size:1.875rem;font-weight:700;text-align:center;margin-bottom:3rem;padding-left:1rem;padding-right:1rem;}
+.diet-grid{display:flex;flex-direction:column;gap:2rem;}
+.diet-card{background:var(--color-surface-container-lowest);border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-card);transition:box-shadow 0.3s,transform 0.3s;}
+.diet-card:hover{box-shadow:var(--shadow-card-hover);transform:translateY(-2px);}
+.diet-card__image{height:15rem;overflow:hidden;}
+.diet-card__image img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.diet-card:hover .diet-card__image img{transform:scale(1.1);}
+.diet-card__body{padding:1.5rem;}
+.diet-card__header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;}
+.diet-card__name{font-weight:700;font-size:1.25rem;}
+.badge{font-size:0.625rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:var(--radius-full);white-space:nowrap;}
+.badge--balanced{background:var(--color-secondary-container);color:var(--color-on-secondary-container);}
+.badge--plant{background:var(--color-primary-container);color:var(--color-on-primary-container);}
+.badge--highfat{background:var(--color-tertiary-fixed);color:var(--color-on-tertiary-fixed);}
+.diet-card__desc{color:var(--color-on-surface-variant);font-size:0.875rem;margin-bottom:1.5rem;line-height:1.6;}
+.diet-card__kcal{display:flex;align-items:center;gap:0.75rem;color:var(--color-primary);font-weight:600;font-size:0.875rem;}
+.diet-card__kcal .material-symbols-outlined{font-size:1rem;}
+
+/* ===== HOW IT WORKS ===== */
+.how-section{padding-top:4rem;padding-bottom:4rem;background:var(--color-surface-container-low);}
+.how-grid{display:flex;flex-direction:column;gap:2.5rem;text-align:center;}
+.how-step{position:relative;}
+.how-step__icon{width:5rem;height:5rem;background:rgba(0,110,28,0.1);color:var(--color-primary);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;}
+.how-step__icon .material-symbols-outlined{font-size:2.5rem;}
+.how-step__title{font-weight:700;font-size:1.125rem;margin-bottom:0.75rem;}
+.how-step__desc{color:var(--color-on-surface-variant);font-size:0.875rem;line-height:1.6;}
+/* Mobile down arrow — show on all steps except last */
+.how-step__arrow{margin-top:1.5rem;display:flex;justify-content:center;}
+.how-step__arrow .material-symbols-outlined{color:rgba(0,110,28,0.3);}
+/* Desktop dashed connector line — hidden by default */
+.how-step__connector{display:none;}
+
+/* ===== MENU PREVIEW ===== */
+.menu-section{padding-top:4rem;padding-bottom:4rem;background:var(--color-surface);}
+.menu-header{display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem;}
+.menu-header__titles h2{font-family:var(--font-headline);font-size:1.875rem;font-weight:700;margin-bottom:0.5rem;}
+.menu-header__titles p{color:var(--color-on-surface-variant);font-size:1rem;}
+.btn-viewmenu{color:var(--color-primary);font-weight:700;font-size:1rem;display:inline-flex;align-items:center;gap:0.5rem;transition:transform 0.3s;background:none;border:none;cursor:pointer;}
+.btn-viewmenu:hover{transform:translateX(0.5rem);}
+.bento-grid{display:flex;flex-direction:column;gap:1.5rem;}
+.bento-main{position:relative;border-radius:var(--radius-xl);height:350px;overflow:hidden;box-shadow:var(--shadow-editorial);}
+.bento-main img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s;}
+.bento-main:hover img{transform:scale(1.05);}
+.bento-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;}
+.bento-overlay__badge{background:var(--color-primary);color:#fff;font-size:0.625rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:var(--radius-full);width:fit-content;margin-bottom:0.75rem;}
+.bento-overlay__title{color:#fff;font-size:1.5rem;font-weight:700;line-height:1.2;margin-bottom:0.5rem;}
+.bento-overlay__sub{color:rgba(255,255,255,0.8);font-size:0.875rem;}
+.bento-side{display:flex;flex-direction:column;gap:1.5rem;}
+.bento-item{position:relative;border-radius:var(--radius-xl);height:250px;overflow:hidden;box-shadow:var(--shadow-editorial);}
+.bento-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s;}
+.bento-item:hover img{transform:scale(1.05);}
+.bento-item__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;}
+.bento-item__title{color:#fff;font-size:1.25rem;font-weight:700;margin-bottom:0.25rem;}
+.bento-item__sub{color:rgba(255,255,255,0.8);font-size:0.75rem;}
+
+/* ===== BENEFITS ===== */
+.benefits-section{padding-top:4rem;padding-bottom:4rem;background:var(--color-surface-container-low);}
+.benefits-grid{display:flex;flex-direction:column;gap:2rem;}
+.benefit-card{padding:2rem;background:var(--color-surface-container-lowest);border-radius:var(--radius-xl);box-shadow:var(--shadow-editorial);}
+.benefit-card__icon{font-size:3rem;color:var(--color-primary);margin-bottom:1.5rem;display:block;}
+.benefit-card__title{font-weight:700;font-size:1.25rem;margin-bottom:1rem;}
+.benefit-card__desc{color:var(--color-on-surface-variant);line-height:1.7;font-size:1rem;}
+
+/* ===== FINAL CTA ===== */
+.cta-section{padding-top:4rem;padding-bottom:4rem;background:var(--color-surface);}
+.cta-box{position:relative;border-radius:var(--radius-xl);padding:2rem;overflow:hidden;text-align:center;box-shadow:var(--shadow-editorial);min-height:400px;display:flex;align-items:center;justify-content:center;background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOGRyqlgodxoO596QHWs6IVlg4bB-nvRj_BKfCCHWTCA764wRqsgjwcan0yWquSyRjI5fYuvW3nYh_JinV7NvBF17AcpcZRpxRWPiZavAf8sGf4Gr0Jqog7Y98JR1MYqF4kc73h4l4ZvnAjXk_Yt0a299wBf3jRQ4nvanklBlXdOPnIIt_eUc0DaifEtajzFe2Oc9Tsb80taEqAAi1_BVZfGVRowVtunq7p0e8HF7gHLyG__lSf1JXHJ3EazqBhSIxSZMrp6HeC3M');background-size:cover;background-position:center;}
+.cta-overlay-dark{position:absolute;inset:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(2px);}
+.cta-overlay-color{position:absolute;inset:0;background:rgba(0,110,28,0.3);}
+.cta-content{position:relative;z-index:10;max-width:48rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+.cta-content h2{font-family:var(--font-headline);font-size:1.875rem;font-weight:800;color:#fff;margin-bottom:1.5rem;line-height:1.1;letter-spacing:-0.02em;}
+.cta-content p{color:rgba(255,255,255,0.9);font-size:1rem;font-weight:500;margin-bottom:2.5rem;}
+.btn-cta{width:100%;background:var(--color-tertiary);color:var(--color-on-tertiary);padding:1rem 2rem;border-radius:var(--radius-default);font-weight:700;font-size:1.125rem;transform:scale(0.95);transition:opacity 0.2s;box-shadow:var(--shadow-editorial);display:inline-flex;align-items:center;justify-content:center;gap:0.75rem;}
+.btn-cta:active{opacity:0.8;}
+.btn-cta .material-symbols-outlined{font-size:1.5rem;}
+
+/* ===== FOOTER ===== */
+
+.footer{border-radius:2rem 2rem 0 0;background:#f5f5f4;}
+.footer__inner{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:3rem;padding-bottom:2.5rem;gap:2rem;}
+.footer__brand{display:flex;flex-direction:column;align-items:center;gap:1rem;max-width:260px;}
+.footer__logo{font-size:2rem;font-weight:700;color:#166534;}
+.footer__tagline{color:#78716c;font-size:1rem;line-height:1.6;}
+.footer__links{display:flex;flex-direction:column;align-items:center;gap:1rem;}
+.footer__links a{color:#78716c;font-size:0.95rem;}
+.footer__bottom{width:100%;padding-top:1.5rem;border-top:1px solid #e7e5e4;text-align:center;}
+.footer__bottom p{color:#78716c; font-size:0.95rem;line-height:1.6;}
+
+/* ===== TABLET 768px+ ===== */
+@media(min-width:768px){
+  .layout-container{padding-left:2rem;padding-right:2rem;}
+
+  /* Nav */
+  .topnav__inner{padding-top:1.25rem;padding-bottom:1.25rem;}
+  .topnav__logo-text{font-size:1.5rem;}
+  .topnav__menu-icon{display:none;}
+  .topnav__links{display:flex;}
+  .topnav__login{display:block;}
+  .topnav__cta{padding:0.75rem 1.75rem;font-size:1rem;}
+
+  /* Hero */
+  .hero{padding-top:10rem;padding-bottom:6rem;}
+  .hero__title{font-size:4.5rem;margin-bottom:2rem;}
+  .hero__desc{font-size:1.25rem;margin-bottom:3rem;}
+  .hero__buttons{flex-direction:row;padding-left:0;padding-right:0;}
+  .btn-primary,.btn-outline{width:auto;}
+  .hero__image-box{height:560px;}
+  .hero__image-bg{inset:-1.5rem;border-radius:3rem;}
+
+  /* Configurator */
+  .configurator-section{padding-top:4rem;padding-bottom:4rem;}
+  .configurator-card{padding:2.5rem 3.5rem;margin-top:-8rem;}
+  /* On desktop: all fields + CTA in one row */
+  .configurator-grid{flex-direction:row;align-items:flex-end;gap:2rem;}
+  .configurator-fields{display:contents;/* dissolve the wrapper, fields go directly into flex row */}
+  .form-field{flex:1;min-width:0;}
+  .form-field--diet .select-wrap select{
+	min-height:76px;
+	padding:1rem 3rem 1rem 1.25rem;
+	font-size:1rem;
+	line-height:1.35;
+	white-space:normal;
+    }
+  .select-wrap select{padding:0.875rem 2.25rem 0.875rem 1.125rem;font-size:0.875rem;}
+  .form-field input{padding:0.875rem 1.125rem;font-size:0.875rem;}
+  .configurator-cta{border-top:none;padding-top:0;flex-shrink:0;min-width:180px;align-items:flex-end;}
+  .configurator-cta__label{font-size:0.8125rem;}
+  .configurator-cta__price{font-size:2.25rem;margin-bottom:0.75rem;}
+  .btn-order{width:auto;white-space:nowrap;padding:0.875rem 2rem;}
+
+  /* Diet */
+  .diet-section{padding-top:7rem;padding-bottom:7rem;}
+  .section-title{font-size:3rem;margin-bottom:5rem;padding:0;}
+  .diet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
+  .diet-card__image{height:18rem;}
+  .diet-card__body{padding:2.5rem;}
+  .diet-card__name{font-size:1.5rem;}
+  .diet-card__desc{font-size:1.125rem;}
+  .badge{font-size:0.75rem;padding:0.375rem 1rem;}
+  .diet-card__kcal{font-size:1rem;}
+  .diet-card__kcal .material-symbols-outlined{font-size:1.125rem;}
+
+  /* How it works */
+  .how-section{padding-top:7rem;padding-bottom:7rem;}
+  .how-section .section-title{margin-bottom:6rem;}
+  .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4rem;text-align:center;}
+  .how-step__icon{width:6rem;height:6rem;margin-bottom:2rem;}
+  .how-step__icon .material-symbols-outlined{font-size:3rem;}
+  .how-step__title{font-size:1.25rem;margin-bottom:1rem;}
+  .how-step__desc{font-size:1rem;}
+  /* Hide mobile arrows on desktop */
+  .how-step__arrow{display:none;}
+  /* Show desktop connector line */
+  .how-step__connector{display:block;position:absolute;top:3rem;left:65%;width:85%;border-top:2px dashed rgba(0,110,28,0.3);}
+
+  /* Menu */
+  .menu-section{padding-top:7rem;padding-bottom:7rem;}
+  .menu-header{flex-direction:row;align-items:flex-end;margin-bottom:4rem;}
+  .menu-header__titles h2{font-size:2.25rem;}
+  .menu-header__titles p{font-size:1.125rem;}
+  .btn-viewmenu{font-size:1.125rem;}
+  .bento-grid{display:grid;grid-template-columns:8fr 4fr;gap:2rem;align-items:stretch;}
+  .bento-main{ min-height:800px;}
+  .bento-overlay{padding:2.5rem;}
+  .bento-overlay__badge{font-size:0.75rem;padding:0.375rem 1rem;margin-bottom:1rem;}
+  .bento-overlay__title{font-size:1.875rem;margin-bottom:0.75rem;}
+  .bento-overlay__sub{font-size:1rem;}
+  .bento-side{display:grid;grid-template-rows:1fr 1fr;gap:2rem;}
+  .bento-item{min-height:384px;}
+  .bento-item__overlay{padding:2rem;}
+  .bento-item__title{font-size:1.25rem;margin-bottom:0.5rem;}
+  .bento-item__sub{font-size:0.875rem;}
+
+  /* Benefits */
+  .benefits-section{padding-top:7rem;padding-bottom:7rem;}
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;}
+  .benefit-card{padding:2.5rem;}
+  .benefit-card__icon{font-size:3.75rem;margin-bottom:2rem;}
+  .benefit-card__title{font-size:1.5rem;margin-bottom:1.25rem;}
+  .benefit-card__desc{font-size:1.125rem;}
+
+  /* CTA */
+  .cta-section{padding-top:7rem;padding-bottom:7rem;}
+  .cta-box{padding:6rem;min-height:500px;}
+  .cta-content h2{font-size:4.5rem;margin-bottom:2.5rem;}
+  .cta-content p{font-size:1.5rem;margin-bottom:3.5rem;}
+  .btn-cta{width:auto;padding:1.5rem 3.5rem;font-size:1.5rem;}
+  .btn-cta .material-symbols-outlined{font-size:1.875rem;}
+
+  /* FOOTER */
+  .footer{border-radius:3rem 3rem 0 0;}
+  .footer__inner{
+    display:grid;
+    grid-template-columns:1fr auto auto;
+    grid-template-rows:auto auto;
+    align-items:start;
+    padding-top:4rem;
+    padding-bottom:4rem;
+    gap:2rem 4rem;
+    flex-direction:unset;
+  }
+  .footer__brand{grid-column:1;grid-row:1/3;align-self:start;}
+  .footer__links{flex-direction:row;gap:2rem;grid-column:2;grid-row:1;align-self:start;flex-wrap:wrap;}
+  .footer__bottom{border-top:none;padding-top:0;width:auto;grid-column:3;grid-row:1;align-self:start;}
+  .footer__tagline{max-width:22rem;}
+}
+
+/* ===== DESKTOP 1024px+ ===== */
+@media(min-width:1024px){
+  .hero__grid{grid-template-columns:repeat(12,1fr);}
+  .hero__content{grid-column:span 6;text-align:left;}
+  .hero__title{font-size:4.5rem;}
+  .hero__desc{margin-left:0;margin-right:0;padding-left:0;padding-right:0;}
+  .hero__buttons{justify-content:flex-start;padding-left:0;}
+  .hero__image-wrap{grid-column:span 6;padding:0;margin-top:0;}
+}
+
+@media(max-width:390px){
+  .layout-container{padding-left:1rem;padding-right:1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="layout-container topnav__inner">
+    <div class="topnav__logo">
+      <span class="material-symbols-outlined topnav__menu-icon">menu</span>
+      <span class="topnav__logo-text">FreshCurated</span>
+    </div>
+    <div class="topnav__links">
+      <a href="#">Diets</a>
+      <a href="#">Menu</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="topnav__actions">
+      <button class="topnav__login">Login</button>
+      <button class="topnav__cta">Get Started</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="layout-container hero__grid">
+    <div class="hero__content">
+      <h1 class="hero__title">Your best self, <span class="accent">delivered</span></h1>
+      <p class="hero__desc">Experience a concierge-level diet catering service that blends gourmet nutrition with effortless living. Fresh, organic, and precisely tailored to your goals.</p>
+      <div class="hero__buttons">
+        <button class="btn-primary">Order diet</button>
+        <button class="btn-outline">View menu</button>
+      </div>
+    </div>
+    <div class="hero__image-wrap">
+      <div class="hero__image-bg"></div>
+      <div class="hero__image-box">
+        <img alt="Gourmet Meal Prep" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3oFzFYoXNgKzhWjqmg90SH0AoWoFKJtIFdTkA037bA3UKDDolejPoM4Q54b7iaki3kJmfdMDrnbp1GdyIH2BtLA2MrHDspIeuAcTUUc0jqIMmiCc5-XKI6xM0ZDkoaRRVOEM0pfvdS1mEg6cLgARogScAWbD5d8lxMC0-Sg-DGO6nb4doSGwc3D3200K42I-OMXXrH7KVRnnK2NmmWE6XRE7bmvI3kGyPTFhZ-rERoCEY78EmQVnZWrJnjoyDMPzk7oRSMSLGCJ0"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURATOR -->
+<section class="configurator-section">
+  <div class="layout-container">
+    <div class="configurator-card">
+      <div class="configurator-grid">
+        <!-- Fields wrapper (dissolves on desktop via display:contents) -->
+        <div class="configurator-fields">
+          <div class="form-field">
+            <label>Diet Type</label>
+            <div class="select-wrap">
+              <select>
+                <option>Standard Balanced</option>
+                <option>Vegetarian Fresh</option>
+                <option>Keto Precision</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Calories</label>
+            <div class="select-wrap">
+              <select>
+                <option>1500 kcal</option>
+                <option>2000 kcal</option>
+                <option>2500 kcal</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Duration</label>
+            <div class="select-wrap">
+              <select>
+                <option>5 Days</option>
+                <option>7 Days</option>
+                <option>20 Days</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Start Date</label>
+            <input type="date"/>
+          </div>
+        </div>
+        <!-- CTA -->
+        <div class="configurator-cta">
+          <p class="configurator-cta__label">Estimated Price</p>
+          <p class="configurator-cta__price">$129.00</p>
+          <button class="btn-order">Start order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIET LIST -->
+<section class="diet-section">
+  <div class="layout-container">
+    <h2 class="section-title">Curated Diet Plans</h2>
+    <div class="diet-grid">
+      <div class="diet-card">
+        <div class="diet-card__image"><img alt="Standard Diet" src="Standard.png"/></div>
+        <div class="diet-card__body">
+          <div class="diet-card__header"><h3 class="diet-card__name">Standard</h3><span class="badge badge--balanced">Balanced</span></div>
+          <p class="diet-card__desc">Perfectly balanced macronutrients for overall health and steady energy levels throughout the day.</p>
+          <div class="diet-card__kcal"><span class="material-symbols-outlined">bolt</span><span>1800-2200 kcal</span></div>
+        </div>
+      </div>
+      <div class="diet-card">
+        <div class="diet-card__image"><img alt="Vegetarian" src="Veg.png"/></div>
+        <div class="diet-card__body">
+          <div class="diet-card__header"><h3 class="diet-card__name">Vegetarian</h3><span class="badge badge--plant">Plant-Based</span></div>
+          <p class="diet-card__desc">Rich in fiber and plant proteins, designed to nourish your body with the purest ingredients from nature.</p>
+          <div class="diet-card__kcal"><span class="material-symbols-outlined">energy_savings_leaf</span><span>1500-2000 kcal</span></div>
+        </div>
+      </div>
+      <div class="diet-card">
+        <div class="diet-card__image"><img alt="Keto" src="Keto.png"/></div>
+        <div class="diet-card__body">
+          <div class="diet-card__header"><h3 class="diet-card__name">Keto</h3><span class="badge badge--highfat">High Fat</span></div>
+          <p class="diet-card__desc">Low-carb, high-fat precision plans focused on ketosis and metabolic efficiency for rapid results.</p>
+          <div class="diet-card__kcal"><span class="material-symbols-outlined">fitness_center</span><span>2000-2500 kcal</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="layout-container">
+    <h2 class="section-title">Your Journey to Wellness</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-step__icon"><span class="material-symbols-outlined">restaurant_menu</span></div>
+        <h4 class="how-step__title">Choose</h4>
+        <p class="how-step__desc">Select the perfect diet plan that aligns with your lifestyle goals.</p>
+        <div class="how-step__arrow"><span class="material-symbols-outlined">south</span></div>
+        <div class="how-step__connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step__icon"><span class="material-symbols-outlined">tune</span></div>
+        <h4 class="how-step__title">Customize</h4>
+        <p class="how-step__desc">Adjust calories and duration to fit your personal schedule perfectly.</p>
+        <div class="how-step__arrow"><span class="material-symbols-outlined">south</span></div>
+        <div class="how-step__connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step__icon"><span class="material-symbols-outlined">local_shipping</span></div>
+        <h4 class="how-step__title">Delivery</h4>
+        <p class="how-step__desc">Receive fresh, gourmet meals daily right at your doorstep.</p>
+        <div class="how-step__arrow"><span class="material-symbols-outlined">south</span></div>
+        <div class="how-step__connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step__icon"><span class="material-symbols-outlined">sentiment_satisfied</span></div>
+        <h4 class="how-step__title">Enjoy</h4>
+        <p class="how-step__desc">Savor chef-curated meals and watch your transformation happen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU PREVIEW -->
+<section class="menu-section">
+  <div class="layout-container">
+    <div class="menu-header">
+      <div class="menu-header__titles">
+        <h2>Weekly Highlights</h2>
+        <p>A glimpse into our upcoming seasonal menu.</p>
+      </div>
+    </div>
+    <div class="bento-grid">
+      <div class="bento-main">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlwvZS11X7TpjYhLjRdQcDz88luQB3f6wOKrgZco70tr-zcGUB8ORUX5qE1hmMSs6HLztg5ipIDK04gq3NYrkccVBuDwoC-ounIIqUv6McAmlaxX3M6mYjDiLuKmrm7ooDCmYxhBhaBXSZy3w1lxsQhXfM8-VjtB1fEqKFLOUgUHWJxgLe3z90KkfzNJKXCFuhSbASQnwQIx0-QfHKsV44M6d6ZJ2Nd4KlHs4QosiOZwXhxEpGHnwIx8f5N3aJPIWki4rlbcCCsNU" alt="Summer Quinoa Power Bowl"/>
+        <div class="bento-overlay">
+          <span class="bento-overlay__badge">Chef's Choice</span>
+          <h3 class="bento-overlay__title">Summer Quinoa Power Bowl</h3>
+          <p class="bento-overlay__sub">450 kcal • High Protein • Vegan</p>
+        </div>
+      </div>
+      <div class="bento-side">
+        <div class="bento-item">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkqvhpNLliA9GJUEcDMOxkdjRL5Q2l8ZZkK0SqbkLSLH6-L0cvEGHinWSJACKqGDJDCFYTbBO0WFX6MYXus2aoH0tInEJwTl7KkXRygItZlpd7iZjOp_Un_u04gx1y00PtPQGdTvAdEu2FdJSdLErmuPw89lGD_gQyKCzhNRfFb81d7wZaIehJvEH1UwMKdcZGCxXJROhW6HGkxEQUonigD-ZnpQN6oRZ3a_ABqIAR_ZqR01KjNBVp-ehfDKpx2Y5IJFSSGFcFAs" alt="Herb Roasted Chicken"/>
+          <div class="bento-item__overlay"><h3 class="bento-item__title">Herb Roasted Chicken</h3><p class="bento-item__sub">520 kcal • Low Carb</p></div>
+        </div>
+        <div class="bento-item">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9NYw9i2CqJfuDliSfXSDjk2OXs0HWA8jcwsjjZBKlOMn2HqkHpkOJkSAyEAZgf6vaVWjk6UE9C-4lJmZ2yg-Y-wBgtEKJmm2fkvOC6DC_qlMsFa_1yMZRhcFtuYv3yDHNQpbDT8hdetu5dqStHPYIWpLn7zHSza7hl_lCtuE_cbUDARDbaADix1PMeKFRKSW4d8uHKkIQprmbpheJiYyBYu2dve7X-hVDBsJoESbGB8wP8RbODBkpNoq6KQivAdYZwbEoFtYdcIU" alt="Signature Avocado Toast"/>
+          <div class="bento-item__overlay"><h3 class="bento-item__title">Signature Avocado Toast</h3><p class="bento-item__sub">380 kcal • Healthy Fats</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="layout-container">
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="material-symbols-outlined benefit-card__icon">eco</span>
+        <h3 class="benefit-card__title">Fresh ingredients</h3>
+        <p class="benefit-card__desc">We source 100% organic, seasonal ingredients from local ethical farms to ensure every bite is packed with nutrients.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="material-symbols-outlined benefit-card__icon">calendar_today</span>
+        <h3 class="benefit-card__title">Flexible plans</h3>
+        <p class="benefit-card__desc">Life is dynamic. Pause, resume, or change your diet plan anytime with our easy-to-use concierge dashboard.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="material-symbols-outlined benefit-card__icon">schedule</span>
+        <h3 class="benefit-card__title">Daily delivery</h3>
+        <p class="benefit-card__desc">No more frozen meals. We deliver fresh every morning in eco-friendly packaging, ready for your day ahead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="layout-container">
+    <div class="cta-box">
+      <div class="cta-overlay-dark"></div>
+      <div class="cta-overlay-color"></div>
+      <div class="cta-content">
+        <h2>Start your diet today</h2>
+        <p>Join thousands of people who have transformed their lives with FreshCurated.</p>
+        <button class="btn-cta">Subscribe Now <span class="material-symbols-outlined">trending_flat</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="layout-container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo">FreshCurated</span>
+      <p class="footer__tagline">Elevating wellness through curated gourmet nutrition.</p>
+    </div>
+    <div class="footer__links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">FAQ</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2024 FreshCurated Catering. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

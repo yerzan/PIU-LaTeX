@@ -1,45 +1,55 @@
-\chapter{Założenia projektu i grupy docelowe}
+\chapter{Projekt interfejsu i narzędzia}
 
-System został zaprojektowany jako zintegrowana platforma typu B2C, łącząca stronę dla klienta z rozbudowanym panelem operacyjnym dla administracji. Kluczowym założeniem było stworzenie środowiska, w którym działania użytkownika końcowego mają bezpośrednie odzwierciedlenie w danych operacyjnych widocznych dla administratora.
+\section{Środowisko projektowe - Figma}
+Całość projektu interfejsu użytkownika została wykonana w programie Figma. Jest to wiodące narzędzie do projektowania interfejsów (UI) oraz prototypowania (UX), pozwalające na efektywne tworzenie tzw. design systemów, komponentów oraz zachowanie pełnej spójności wizualnej między ekranami.
 
-\section{Typy użytkowników końcowych}
-W systemie zdefiniowano dwa główne typy użytkowników, których ścieżki (user flows) determinują architekturę interfejsu. Na Rysunku \ref{fig:create_account} zaprezentowano widok rejestracji, który jest punktem startowym dla użytkownika zalogowanego.
+Aby zobrazować skalę projektu, na Rysunkach \ref{fig:figma1} oraz \ref{fig:figma2} zaprezentowano zrzuty ekranu z obszaru roboczego programu Figma, na których widać wszystkie zaprojektowane widoki w oddaleniu.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/CreateAccount.png}
-    \caption{Ekran tworzenia konta klienta}
-    \label{fig:create_account}
+    \includegraphics[width=0.9\textwidth]{figures/figma-workspace2.png}
+    \caption{Obszar roboczy Figma - widok ekranów aplikacji klienckiej}
+    \label{fig:figma1}
 \end{figure}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/figma-workspace.png}
+    \caption{Obszar roboczy Figma - widok ekranów panelu administracyjnego}
+    \label{fig:figma2}
+\end{figure}
+
+\section{System wizualny i Design System}
+Interfejs został zaprojektowany w nowoczesnym stylu, z naciskiem na minimalizm (tzw. \textit{clean design}), czytelność i użyteczność. Zastosowany motyw kolorystyczny bezpośrednio nawiązuje do branży zdrowego odżywiania i cateringu dietetycznego, budząc skojarzenia ze świeżością i naturą.
+
+Na Rysunku \ref{fig:paleta} zaprezentowano bazowy dokument stylów (roboczy frame z Figmy), zawierający specyfikację kolorów, typografii oraz przykładowe komponenty (przyciski, inputy, ikony).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/palitra-kolorow.png}
+    \caption{Paleta kolorów, typografia oraz komponenty UI}
+    \label{fig:paleta}
+\end{figure}
+
+\textbf{Kolorystyka aplikacji:}
 \begin{itemize}
-    \item \textbf{Użytkownik niezalogowany}: Głównym celem jest zapoznanie się z ofertą dietetyczną. Funkcjonalności obejmują przeglądanie menu, weryfikację cenników oraz rozpoczęcie procesu składania zamówienia.
-    \item \textbf{Użytkownik zalogowany}: Posiada pełny dostęp do personalizacji usług. Funkcjonalności obejmują dostęp do historii zamówień, zarządzanie kontem, edycję adresów dostaw oraz modyfikację parametrów aktywnych diet.
+    \item \textbf{Primary (\#4CAF50)}: Główny, jasny odcień zieleni, używany do najważniejszych akcji (CTA, główne przyciski).
+    \item \textbf{Secondary (\#2E7D32)}: Ciemniejsza zieleń, pełniąca rolę wspomagającą i budująca kontrast.
+    \item \textbf{Tertiary (\#FF9800)}: Kontrastujący pomarańcz, wykorzystywany do ostrzeżeń, powiadomień lub wyróżniania statusów.
+    \item \textbf{Neutral (\#F5F5F5)}: Bardzo jasny, neutralny szary, stosowany jako tło aplikacji, zapewniający czystość i przejrzystość układu.
 \end{itemize}
 
-\section{Role administracyjne}
-Zarządzanie działalnością cateringową podzielono na odrębne kompetencje, co znajduje odzwierciedlenie w strukturze panelu administratora przedstawionego na Rysunku \ref{fig:admin_panel_chapter2}.
+\textbf{Typografia:}
+W projekcie wykorzystano dwa bezszeryfowe kroje pisma:
+\begin{itemize}
+    \item \textbf{Manrope}: Zastosowany w nagłówkach (Headline), nadający interfejsowi nowoczesny, wyrazisty charakter.
+    \item \textbf{Plus Jakarta Sans}: Wykorzystany w tekstach głównych (Body) oraz etykietach (Label), gwarantujący doskonałą czytelność nawet w mniejszych rozmiarach.
+\end{itemize}
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/AdminPanel.png}
-    \caption{Panel główny (Dashboard) administratora systemu}
-    \label{fig:admin_panel_chapter2}
-\end{figure}
+\section{Wykorzystanie narzędzi AI}
+Zgodnie z wymogami projektu, dokumentujemy wykorzystanie narzędzi sztucznej inteligencji. Grafiki (assety) użyte w interfejsie, w szczególności wysokiej jakości zdjęcia posiłków prezentowane na widokach list diet i szczegółów, zostały wygenerowane za pomocą narzędzi AI: \textbf{ChatGPT} (moduł DALL-E) oraz \textbf{Google Gemini}.
 
-Poniższa tabela przedstawia podział odpowiedzialności w zespole administracyjnym:
+\textbf{Przykładowy prompt użyty do wygenerowania zdjęć posiłków:} \\
+\textit{"Professional food photography, top-down view of a healthy keto meal in a black premium delivery container. The meal consists of grilled salmon, fresh avocado, and steamed broccoli. High resolution, studio lighting, clean background."}
 
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|l|p{8cm}|}
-        \hline
-        \textbf{Rola} & \textbf{Zakres odpowiedzialności} \\ \hline
-        Administrator główny & Pełny dostęp do konfiguracji systemu i raportów. \\ \hline
-        Pracownik biura & Bieżąca obsługa zamówień i relacji z klientami. \\ \hline
-        Magazynier & Kontrola stanów składników i zarządzanie alertami braków. \\ \hline
-        Logistyk/Kurier & Planowanie tras dostaw i nadzór nad realizacją. \\ \hline
-    \end{tabular}
-    \caption{Podział ról w panelu administracyjnym}
-\end{table}
-
-Taka architektura pozwala na bezpieczną separację obowiązków i zwiększa wydajność obsługi procesów biznesowych cateringu.
+Narzędzia sztucznej inteligencji posłużyły w projekcie wyłącznie do wygenerowania assetów graficznych oraz przykładowych tekstów (tzw. fillerów). Całość struktury widoków, architektura informacji oraz ostateczny układ zostały stworzone samodzielnie w programie Figma.

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCurated - Order Configurator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">FreshCurated</div>
+        <nav>
+            <a href="#">Diets</a>
+            <a href="#">Menu</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Order Configurator</h1>
+            <p>Customize your dietary plan to reach your goals.</p>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="left-column">
+                <section class="card">
+                    <h2>1. Choose Diet</h2>
+                    <div class="diet-selector">
+                        <div class="diet-info">
+                            <div class="icon">🌿</div>
+                            <div>
+                                <h3>Keto</h3>
+                                <p>Low carbohydrate, high fat dietary approach.</p>
+                            </div>
+                        </div>
+                        <button class="btn-outline">Change diet</button>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>2. Your Goals</h2>
+                    <p class="subtitle">Daily Calorie Limit</p>
+                    <div class="toggle-group">
+                        <button class="toggle-btn">1500 kcal</button>
+                        <button class="toggle-btn active">2000 kcal</button>
+                        <button class="toggle-btn">2500 kcal</button>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>3. Delivery Period</h2>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <span class="month-year">October 2024</span>
+                            <div class="arrows">
+                                <span>&lt;</span>
+                                <span>&gt;</span>
+                            </div>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day-names">
+                                <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+                            </div>
+                            <div class="days" id="calendar-days">
+                                </div>
+                        </div>
+                        <div class="date-inputs">
+                            <div class="input-group">
+                                <label>Start Date</label>
+                                <input type="text" id="start-date" readonly placeholder="Select start date">
+                            </div>
+                            <div class="input-group">
+                                <label>End Date</label>
+                                <input type="text" id="end-date" readonly placeholder="Select end date">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2>4. Delivery Address</h2>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Street</label>
+                            <input type="text" placeholder="e.g. Baker Street">
+                        </div>
+                        <div class="input-group">
+                            <label>House / Apartment No.</label>
+                            <input type="text" placeholder="221B">
+                        </div>
+                        <div class="input-group">
+                            <label>Postal Code</label>
+                            <input type="text" placeholder="NW1 6XE">
+                        </div>
+                        <div class="input-group">
+                            <label>City</label>
+                            <input type="text" placeholder="London">
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <aside class="summary-card">
+                    <h2>Summary</h2>
+                    <div class="summary-item">
+                        <span class="icon">🍴</span>
+                        <div>
+                            <p class="label">Selected Diet</p>
+                            <p class="value">Keto Diet</p>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="icon">⚡</span>
+                        <div>
+                            <p class="label">Energy</p>
+                            <p class="value">2000 kcal / day</p>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="icon">📅</span>
+                        <div>
+                            <p class="label">Duration</p>
+                            <p class="value" id="summary-duration">7 days (Oct 1 - Oct 7)</p>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="total-section">
+                        <span class="old-price">129,00 zł</span>
+                        <div class="price-row">
+                            <span>Total to Pay</span>
+                            <span class="final-price">115,00 zł</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-checkout">Proceed to Payment</button>
+                    <p class="secure-text">Secure online payment</p>
+                </aside>
+
+                <div class="guarantee-card">
+                    <span class="icon">✔️</span>
+                    <p><strong>Freshness Guarantee.</strong> Every meal is prepared fresh on the morning of delivery using local ingredients.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <h2 class="logo">FreshCurated</h2>
+            <p>Elevating wellness through curated gourmet nutrition.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">FAQ</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="footer-right">
+            <p>&copy; 2024 FreshCurated Catering. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

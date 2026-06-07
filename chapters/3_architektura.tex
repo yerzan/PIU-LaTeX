@@ -1,49 +1,37 @@
-\chapter{Architektura interfejsu}
+\chapter{Implementacja HTML i CSS}
 
-Architektura systemu została zaprojektowana w oparciu o podział na dwie wzajemnie uzupełniające się płaszczyzny: interfejs klienta oraz panel administracyjny. Poniższa tabela przedstawia mapę funkcjonalności systemu w odniesieniu do kluczowych widoków aplikacji.
+\section{Zakres wdrożenia i responsywność}
+Zgodnie z wymogami projektu, wybrane widoki zaprojektowane w programie Figma zostały zaimplementowane do działającego kodu przy użyciu technologii HTML5 oraz CSS3. 
 
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|l|l|p{6cm}|}
-        \hline
-        \textbf{Moduł} & \textbf{Widok} & \textbf{Główna funkcja} \\ \hline
-        Klient & \texttt{MainPage.png} & Prezentacja oferty i nawigacja[cite: 3]. \\ \hline
-        Klient & \texttt{OrderConfigurator.png} & Personalizacja i konfiguracja zamówienia[cite: 2]. \\ \hline
-        Admin & \texttt{AdminPanel.png} & Monitoring operacji w czasie rzeczywistym[cite: 3]. \\ \hline
-        Admin & \texttt{AdminDiets-menu.png} & Zarządzanie bazą posiłków i składnikami[cite: 3]. \\ \hline
-    \end{tabular}
-    \caption{Mapa funkcjonalności systemu}
-\end{table}
+Kluczowym założeniem podczas kodowania było zapewnienie pełnej responsywności (RWD - Responsive Web Design). Dzięki zastosowaniu nowoczesnych technik ostylowania (takich jak Flexbox oraz CSS Grid) a także zapytań medialnych (Media Queries), zaimplementowane interfejsy płynnie skalują się i dostosowują swój układ do szerokości okna przeglądarki. Potwierdza to, że system jest w pełni gotowy do obsługi zarówno na urządzeniach desktopowych, jak i mobilnych (smartfony, tablety).
 
-\section{Struktura interfejsu klienta}
-Centralnym punktem interfejsu klienta jest \texttt{MainPage.png}, który pełni rolę głównego kanału marketingowego i punktu wejścia do procesu sprzedażowego[cite: 3]. Z kolei \texttt{OrderConfigurator.png} stanowi najbardziej złożony element UI, integrujący wybór diety z dynamiczną kalkulacją kosztów i zbieraniem danych dostawczych[cite: 2].
+Zgodnie z wymogiem prowadzącego, w procesie tworzenia bazowej struktury HTML oraz podstawowych reguł CSS wykorzystano wsparcie narzędzi AI (np. ChatGPT), przy czym wygenerowany kod został ręcznie zoptymalizowany, przetestowany i dostosowany do rygorystycznych wymogów responsywności.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{figures/MainPage.png}
-    \hfill
-    \includegraphics[width=0.45\textwidth]{figures/OrderConfigurator.png}
-    \caption{Widok główny aplikacji oraz ekran konfiguratora zamówienia}
-    \label{fig:arch_klient}
-\end{figure}
+\section{Struktura katalogów}
+Aby zachować maksymalną czytelność i porządek w kodzie źródłowym, projekt został podzielony na logiczne foldery odpowiadające wdrożonym widokom. Poniżej przedstawiono strukturę katalogów zaimplementowanej części interfejsu:
 
-\section{Struktura panelu administracyjnego}
-Panel administracyjny został podzielony na moduły odzwierciedlające realne procesy biznesowe cateringu. \texttt{AdminPanel.png} zapewnia administratorowi szybki wgląd w "zdrowie" operacyjne firmy, prezentując kluczowe wskaźniki (KPI)[cite: 3].
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{figures/AdminPanel.png}
-    \hfill
-    \includegraphics[width=0.45\textwidth]{figures/AdminDiets-menu.png}
-    \caption{Panel główny administratora oraz moduł zarządzania dietami}
-    \label{fig:arch_admin}
-\end{figure}
-
-Moduł zarządzania dietami, widoczny na \texttt{AdminDiets-menu.png}, pozwala na zaawansowane operacje, takie jak:
 \begin{itemize}
-    \item Tworzenie nowych profili dietetycznych[cite: 3].
-    \item Przypisywanie posiłków do jadłospisu z pełną kontrolą wartości odżywczych[cite: 3].
-    \item Nadzór nad stanami magazynowymi składników[cite: 3].
+    \item \textbf{MainPage} -- Strona główna z ofertą.
+    \begin{itemize}
+        \item \texttt{MainPage.html} -- semantyczna struktura widoku
+    \end{itemize}
+    
+    \item \textbf{Dashboard} -- Panel użytkownika z historią zamówień.
+    \begin{itemize}
+        \item \texttt{dashboard.html} -- struktura widoku panelu klienta
+    \end{itemize}
+
+    \item \textbf{OrderConfigurator} -- Zaawansowany konfigurator zamówienia.
+    \begin{itemize}
+        \item \texttt{configurator.html} -- struktura formularzy i kalendarza
+        \item \texttt{style.css} -- style formularzy i siatki (Grid/Flexbox)
+        \item \texttt{script.js} -- plik obsługujący interakcję (np. wybór dat)
+    \end{itemize}
+
+    \item \textbf{AdminDiets-menu} -- Moduł zarządzania dietami dla administratora.
+    \begin{itemize}
+        \item \texttt{Diets-menu-managment.html} -- struktura widoku panelu administracyjnego
+    \end{itemize}
 \end{itemize}
 
-Tak zaprojektowana architektura zapewnia pełną integralność danych między zamówieniami klientów a procesami logistycznymi i produkcyjnymi firmy, co jest niezbędne dla kompleksowego rozwiązania problemów biznesowych cateringu[cite: 1].
+Takie podejście ułatwia ewentualną dalszą rozbudowę aplikacji oraz integrację front-endu z systemami back-endowymi.
