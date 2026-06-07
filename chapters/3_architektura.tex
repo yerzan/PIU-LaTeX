@@ -1,4 +1,4 @@
-\chapter{Implementacja HTML i CSS}
+\chapter{Implementacja HTML, CSS i JavaScript}
 
 \section{Zakres wdrożenia i responsywność}
 Zgodnie z wymogami projektu, wybrane widoki zaprojektowane w programie Figma zostały zaimplementowane do działającego kodu przy użyciu technologii HTML5 oraz CSS3. 
@@ -7,30 +7,35 @@ Kluczowym założeniem podczas kodowania było zapewnienie pełnej responsywnoś
 
 Zgodnie z wymogiem prowadzącego, w procesie tworzenia bazowej struktury HTML oraz podstawowych reguł CSS wykorzystano wsparcie narzędzi AI (np. ChatGPT), przy czym wygenerowany kod został ręcznie zoptymalizowany, przetestowany i dostosowany do rygorystycznych wymogów responsywności.
 
-\section{Struktura katalogów}
-Aby zachować maksymalną czytelność i porządek w kodzie źródłowym, projekt został podzielony na logiczne foldery odpowiadające wdrożonym widokom. Poniżej przedstawiono strukturę katalogów zaimplementowanej części interfejsu:
+\section{Struktura katalogów i plików}
+Aby zachować maksymalną czytelność i porządek w kodzie źródłowym, projekt został podzielony na logiczne sekcje odpowiadające wdrożonym widokom. Poniżej przedstawiono zaktualizowaną strukturę plików zaimplementowanej części interfejsu:
 
 \begin{itemize}
-    \item \textbf{MainPage} -- Strona główna z ofertą.
+    \item \textbf{MainPage} -- Strona główna aplikacji.
     \begin{itemize}
-        \item \texttt{MainPage.html} -- semantyczna struktura widoku
+        \item \texttt{freshcurated.html} -- semantyczna struktura widoku strony startowej i oferty.
     \end{itemize}
     
-    \item \textbf{Dashboard} -- Panel użytkownika z historią zamówień.
+    \item \textbf{Dashboard} -- Panel użytkownika.
     \begin{itemize}
-        \item \texttt{dashboard.html} -- struktura widoku panelu klienta
+        \item \texttt{dashboard.html} -- struktura widoku z historią zamówień i aktywnymi dietami.
     \end{itemize}
 
     \item \textbf{OrderConfigurator} -- Zaawansowany konfigurator zamówienia.
     \begin{itemize}
-        \item \texttt{configurator.html} -- struktura formularzy i kalendarza
-        \item \texttt{style.css} -- style formularzy i siatki (Grid/Flexbox)
-        \item \texttt{script.js} -- plik obsługujący interakcję (np. wybór dat)
+        \item \texttt{index.html} -- struktura formularzy, wyboru celów i kalendarza dostaw.
+        \item \texttt{style.css} -- główny arkusz stylów oparty na zmiennych (CSS Variables) dla utrzymania spójności palety kolorów, stylujący siatki (Grid/Flexbox) oraz elementy UI.
+        \item \texttt{script.js} -- plik z logiką interakcji i obsługą formularza zamówienia.
     \end{itemize}
 
-    \item \textbf{AdminDiets-menu} -- Moduł zarządzania dietami dla administratora.
+    \item \textbf{AdminDiets} -- Moduł zarządzania dla administratora.
     \begin{itemize}
-        \item \texttt{Diets-menu-managment.html} -- struktura widoku panelu administracyjnego
+        \item \texttt{Diets-menu-managment.html} -- struktura widoku panelu administracyjnego do zarządzania biblioteką posiłków.
+    \end{itemize}
+
+    \item \textbf{ClientProfile} -- Moduł CRM.
+    \begin{itemize}
+        \item \texttt{client-profile.html} -- kompleksowy widok profilu klienta (CRM) agregujący dane o zamówieniach, restrykcjach dietetycznych (alergie) oraz historię aktywności.
     \end{itemize}
 \end{itemize}
 
