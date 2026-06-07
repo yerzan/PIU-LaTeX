@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.14)  7 JUN 2026 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.14)  7 JUN 2026 21:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,11 +814,11 @@ Package babel Info: 'polish' activates 'polish' shorthands.
 
  (chapters/2_zalozenia.tex
 Rozdzia\l  2.
-<figures/figma-workspace2.png, id=118, 700.41675pt x 260.172pt>
+<figures/figma-workspace2.png, id=118, 678.73575pt x 251.7405pt>
 File: figures/figma-workspace2.png Graphic file (type png)
 <use figures/figma-workspace2.png>
 Package pdftex.def Info: figures/figma-workspace2.png  used on input line 10.
-(pdftex.def)             Requested size: 384.1096pt x 142.67818pt.
+(pdftex.def)             Requested size: 384.1096pt x 142.46794pt.
 <figures/figma-workspace.png, id=120, 696.80325pt x 372.1905pt>
 File: figures/figma-workspace.png Graphic file (type png)
 <use figures/figma-workspace.png>
@@ -991,7 +991,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  88i,12n,94p,641b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on praca.pdf (14 pages, 5254908 bytes).
+Output written on praca.pdf (14 pages, 5250391 bytes).
 PDF statistics:
  253 PDF objects out of 1000 (max. 8388607)
  40 named destinations out of 1000 (max. 500000)
